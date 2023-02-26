@@ -27,6 +27,8 @@ private:
 	int sz;
 	int _row;
 public:
+	Table(const Table&) = delete;
+	Table& operator = (const Table&) = delete;
 	Table(int row, int col) : _row(row) // про выброс исключения в случае значений < 0, в задаче нет указаний
 	{
 		elem = new T* [row];
